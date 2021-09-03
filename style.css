@@ -1,0 +1,29 @@
+div.child{
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+
+}
+div.child:hover{
+    background-color: blue;
+}
+input:focus{
+    background-color:orange;
+}
+div::selection{
+    background-color: aquamarine;
+}
+li{
+    list-style: none;
+    font-size: 4rem;
+}
+li::before{
+    content: "before the elemeny";
+    color: blueviolet;
+    font-size: 2rem;
+}
+li::after{
+    content: "before the elemeny";
+    color: blueviolet;
+    font-size: 2rem;
+}
