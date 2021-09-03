@@ -15,15 +15,72 @@ div.container div.ball{
     width: 100px;
     height: 100px;
     background-color: aqua;
-    transition-duration: 0.3s;
-    transition-timing-function:cubic-bezier(0.4, 0, 1, 1);
+    
 }
-div.container:hover div.ball{
-    /* border-radius: 50%; */
-    cursor: pointer;
-    /* transform: rotatez(120deg); */
-    /* transform: scale(2); */
-    transform: translatex(499px);
-    background-color: brown;
-
+ div.ball{
+  margin: 19px;
+  animation-duration: 2s;
+  animation-name: stylish-rotate;
+  animation-fill-mode: forwards; 
+  animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1); 
+  animation-iteration-count: infinite;
+  
 } 
+div.ball:nth-child(2){
+    
+    animation-delay: 2s;
+    animation-duration: 2s;
+    animation-name: bounce;
+  } 
+div.ball:nth-child(3){
+    
+    animation-delay: 2.5s;
+  } 
+div.ball:nth-child(4){
+    
+    animation-delay: 3s;
+    animation-duration: 2s;
+    animation-name: bounce;
+  } 
+div.ball:nth-child(5){
+    
+    animation-delay: 3.5s;
+  } 
+@keyframes bounce {
+    0%{
+
+    }
+    25%{
+        transform: translateY(100px);
+    }
+    50%{
+        transform: translateY(0px);
+    }
+    75%{
+        transform: translateY(-100px);
+    }
+    100%{}
+}
+@keyframes stylish-rotate {
+    0%{
+        background-color: blue;
+    }
+    25%{
+        background-color: black;
+    }
+    42%{
+        background-color: blueviolet;
+    }
+    56%{
+        background-color: darkcyan;
+    }
+    70%{
+        background-color: orange;
+    }
+    100%{
+        background-color: aqua;
+        transform: rotateZ(120deg);
+    }
+}
+
+
